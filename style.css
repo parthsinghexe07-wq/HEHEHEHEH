@@ -1,0 +1,113 @@
+*{box-sizing:border-box}
+:root{
+ --pink:#ff4f9e;--pink2:#ffb5d3;--dark:#3d1029;--white:#fff;
+}
+html{scroll-behavior:smooth}
+body{
+ margin:0;min-height:100vh;color:var(--dark);
+ font-family:Arial,Helvetica,sans-serif;
+ background:
+ radial-gradient(circle at 15% 10%,#fff 0 4%,transparent 25%),
+ radial-gradient(circle at 85% 25%,#ffd0e4 0 5%,transparent 25%),
+ linear-gradient(135deg,#ffd6e7,#fff0f6 48%,#ffc8df);
+ overflow-x:hidden;
+}
+body:before{
+ content:"";position:fixed;inset:0;pointer-events:none;opacity:.25;
+ background-image:radial-gradient(#fff 1px,transparent 1px);
+ background-size:20px 20px;
+}
+.page{width:min(760px,92%);margin:auto;padding:28px 0 90px}
+.glass{
+ margin:20px 0;padding:30px;border:1px solid #fff8;
+ border-radius:30px;background:#ffffffd9;
+ box-shadow:0 20px 60px #6d1b4630;
+ backdrop-filter:blur(12px);
+}
+.hero{text-align:center;padding:48px 28px}
+.pill,.tiny-pill{
+ display:inline-block;background:#ffe1ee;color:#a62561;
+ padding:8px 14px;border-radius:999px;font-weight:800;font-size:12px;
+ letter-spacing:1px;
+}
+h1{font-size:clamp(44px,10vw,76px);line-height:.95;margin:18px 0}
+h2{font-size:clamp(25px,5vw,38px);margin:12px 0 18px}
+p{font-size:18px;line-height:1.65}
+.subtitle{font-size:20px}
+.hint{font-size:13px;opacity:.55}
+.start,.yes,.no,.again,.music-btn{
+ border:0;cursor:pointer;font-weight:800;transition:transform .2s,box-shadow .2s;
+}
+.start{
+ background:var(--pink);color:white;padding:15px 27px;border-radius:999px;
+ font-size:17px;box-shadow:0 10px 25px #ff4f9e55;
+}
+.start:hover,.yes:hover{transform:translateY(-3px)}
+.eyebrow{font-size:12px;letter-spacing:2px;font-weight:900;color:#c13273}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .7s,transform .7s}
+.reveal.show{opacity:1;transform:none}
+img{width:100%;display:block;border-radius:22px;margin:15px 0}
+.plan{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.plan div{
+ padding:18px;border-radius:20px;background:#fff0f6;
+ display:flex;flex-direction:column;gap:5px;
+}
+.plan span{font-size:12px;color:#d63b7c;font-weight:900}
+.plan small{opacity:.65;font-size:14px}
+.final-card{text-align:center;position:relative;overflow:hidden}
+.sparkle{font-size:45px}
+.soft{opacity:.72;font-size:16px}
+.choice-area{
+ min-height:130px;display:flex;justify-content:center;align-items:center;
+ gap:12px;position:relative;margin-top:20px;
+}
+.yes{
+ background:linear-gradient(135deg,#ff4f9e,#ff287e);color:#fff;
+ padding:20px 38px;border-radius:999px;font-size:20px;
+ box-shadow:0 12px 30px #ff4f9e66;z-index:3;
+}
+.no{
+ background:#eee;color:#6b3a52;padding:13px 22px;border-radius:999px;
+ font-size:16px;z-index:2;
+}
+.no.shrink{transform:scale(.55);opacity:.55}
+.no-text{min-height:25px;color:#b12d69;font-weight:700;font-size:14px}
+.music-btn{
+ position:fixed;right:18px;top:18px;width:48px;height:48px;border-radius:50%;
+ background:#fff;color:#d52e77;font-size:21px;z-index:20;
+ box-shadow:0 8px 25px #0002;
+}
+.celebration{
+ display:none;position:fixed;inset:0;z-index:50;
+ background:radial-gradient(circle,#ff8fbc,#ff3d88 45%,#7c1649);
+ align-items:center;justify-content:center;padding:20px;
+}
+.celebration.show{display:flex}
+#confetti{position:absolute;inset:0;width:100%;height:100%}
+.celebrate-box{
+ position:relative;z-index:2;width:min(600px,94%);text-align:center;
+ color:#fff;background:#ffffff18;border:1px solid #ffffff55;
+ border-radius:35px;padding:40px 25px;backdrop-filter:blur(16px);
+ box-shadow:0 30px 100px #35001e77;
+ animation:pop .6s cubic-bezier(.2,1.5,.4,1);
+}
+.big-heart{font-size:90px;animation:pulse 1s infinite alternate}
+.celebrate-box h1{font-size:clamp(38px,9vw,65px);margin:18px 0}
+.date-card{
+ margin:22px auto;padding:18px;border-radius:20px;background:#ffffff22;
+ display:flex;flex-direction:column;gap:8px;font-size:17px;
+}
+.ending{font-size:17px}
+.again{background:#fff;color:#9c225e;padding:12px 20px;border-radius:999px}
+@keyframes pop{from{transform:scale(.5);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes pulse{from{transform:scale(1)}to{transform:scale(1.1)}}
+.heart-float{
+ position:fixed;bottom:-50px;font-size:24px;pointer-events:none;z-index:1;
+ animation:floatUp linear forwards;
+}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(360deg);opacity:0}}
+@media(max-width:600px){
+ .page{width:94%}.glass{padding:23px;border-radius:24px}
+ .plan{grid-template-columns:1fr}
+ .choice-area{min-height:150px}
+}

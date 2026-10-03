@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ff4f9e">
+<title>Baigan Ji ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="hearts" aria-hidden="true"></div>
+
+<audio id="music" loop preload="auto">
+  <source src="assets/song.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn" class="music-btn" aria-label="Play music">🎵</button>
+
+<main class="page">
+  <section class="hero glass">
+    <div class="pill">PRIVATE MESSAGE FOR BAIGAN JI 💌</div>
+    <h1>Oye Baigan... 👀</h1>
+    <p class="subtitle">2 minute ka time de de, madam. Promise boring nahi hoga 😭</p>
+    <button class="start" onclick="startExperience()">Tap here 👆</button>
+    <p class="hint">🎵 Tap once to start the vibe</p>
+  </section>
+
+  <section class="glass reveal">
+    <p class="eyebrow">FIRST OF ALL...</p>
+    <h2>Mujhe feelings express karni nahi aati yrr 🥲</h2>
+    <p>
+      Toh aaj filmy banne ki koshish nahi karunga.
+      Seedha bolta hoon — <strong>tum mujhe pasand ho.</strong> ❤️
+    </p>
+    <p>
+      Aur haan... beard abhi loading pe hai 😭<br>
+      Punjabi toh nahi hoon, but waffle department mein full qualified hoon. 🧇
+    </p>
+  </section>
+
+  <section class="glass reveal">
+    <p class="eyebrow">SCIENTIFIC PROOF 🧪</p>
+    <img src="assets/baigan-meme.jpg" alt="Cute Baigan meme">
+    <h2>Baigan = cutie confirmed. No further questions. 😭❤️</h2>
+  </section>
+
+  <section class="glass reveal">
+    <p class="eyebrow">OKAY BUT HEAR ME OUT...</p>
+    <h2>This could be us 👀</h2>
+    <img src="assets/this-could-be-us.jpg" alt="This could be us">
+    <p>
+      Bas thoda less Bollywood, zyada university wali bakchodi. 😂
+    </p>
+  </section>
+
+  <section class="glass reveal">
+    <p class="eyebrow">THE ACTUAL PLAN 🧇</p>
+    <div class="plan">
+      <div><span>01</span><b>University explore</b><small>koi random nayi jagah</small></div>
+      <div><span>02</span><b>Bakbak session</b><small>main nervous hounga, obviously 😭</small></div>
+      <div><span>03</span><b>Waffle mission</b><small>tum choose karna 🧇</small></div>
+      <div><span>04</span><b>One good memory</b><small>bas simple sa</small></div>
+    </div>
+  </section>
+
+  <section class="glass reveal final-card" id="question">
+    <div class="sparkle">✨</div>
+    <p class="eyebrow">SO MADAM PUNJABAN...</p>
+    <h2>Ek waffle date ho jaye? 🧇❤️</h2>
+    <p class="soft">
+      No pressure. Tumne bola hai ki you're not ready — I respect that.
+      Main bas ek chance pooch raha hoon to spend a little time together.
+    </p>
+
+    <div class="choice-area">
+      <button id="yesBtn" class="yes" onclick="sayYes()">YES 🧇❤️</button>
+      <button id="noBtn" class="no" onclick="runAway()">NO 🙈</button>
+    </div>
+
+    <p id="noText" class="no-text"></p>
+  </section>
+</main>
+
+<section id="celebration" class="celebration">
+  <canvas id="confetti"></canvas>
+  <div class="celebrate-box">
+    <div class="big-heart">💗</div>
+    <div class="tiny-pill">WAFFLE TREATY SIGNED</div>
+    <h1>BAIGAN JI SAID YES 😭❤️</h1>
+    <p>
+      OHHHHH BHAI SAHAB 😭<br>
+      Madam Punjaban ne waffle mission approve kar diya.
+    </p>
+    <div class="date-card">
+      <b>DATE MISSION 🧇</b>
+      <span>University + Walk + Bakbak + Waffle</span>
+    </div>
+    <p class="ending">Ab jagah tum choose karo, punctual main hone ki acting karunga. 😌</p>
+    <button class="again" onclick="closeCelebration()">← Ek baar aur dekh lo</button>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
